@@ -1,23 +1,31 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 type: default-flatpaks
-system:
-    install:
-        - page.tesk.Refine
-        - org.gnome.Loupe
-        - org.gnome.Calculator
-        - org.gnome.Calendar
-        - org.gnome.Characters
-        - com.mattjakeman.ExtensionManager
-        - org.gnome.Contacts
-        - org.gnome.Connections
-        - org.gnome.Logs
-        - org.gnome.Maps
-        - org.gnome.Papers
-        - org.gnome.Snapshot
-        - org.gnome.TextEditor
-        - org.gnome.Weather
-        - org.gnome.baobab
-        - org.gnome.clocks
-        - org.gnome.font-viewer
-        - org.gnome.TextEditor
+  configurations:
+  - scope: user
+    repo:
+      # you can override the title to make inclusion of both system and user repos clearer
+      title: Flathub (user)
+  - notify: false
+    scope: system
+    repo:
+      title: Flathub (system)
+    install: # system flatpaks we want all users to have and not remove
+      - page.tesk.Refine
+      - org.gnome.Loupe
+      - org.gnome.Calculator
+      - org.gnome.Calendar
+      - org.gnome.Characters
+      - com.mattjakeman.ExtensionManager
+      - org.gnome.Contacts
+      - org.gnome.Connections
+      - org.gnome.Logs
+      - org.gnome.Maps
+      - org.gnome.Papers
+      - org.gnome.Snapshot
+      - org.gnome.TextEditor
+      - org.gnome.Weather
+      - org.gnome.baobab
+      - org.gnome.clocks
+      - org.gnome.font-viewer
+      - org.gnome.TextEditor
