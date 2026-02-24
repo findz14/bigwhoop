@@ -74,6 +74,13 @@ modules:
     # use if gnome extensions
   - from-file: recipe-modules/gnome-tweaks.yml
 
+  - type: systemd
+  # this example disables automatic flatpak updates and enables a custom service unit for all users
+  system:
+    enabled:
+      - docker.service
+      - libvirtd.service
+      
   - type: os-release
     properties:
       ID: bigwhoop
