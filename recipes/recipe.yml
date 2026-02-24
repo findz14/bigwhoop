@@ -73,8 +73,6 @@ modules:
   - from-file: recipe-modules/gnome-flatpaks.yml
     # use if gnome extensions
   - from-file: recipe-modules/gnome-tweaks.yml
-    # add users to group
-  - from-file: recipe-modules/add-user.yml
 
   - type: os-release
     properties:
