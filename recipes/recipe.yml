@@ -46,9 +46,9 @@ modules:
         - lutris
 
   # install steam
-  - type: dnf
+  -type: dnf
     repos:
-      - https://negativo17.org/repos/fedora-steam.repo
+      nonfree: negativo17
     install:
       - steam
       - kernel-modules-extra # Often needed for gaming/controllers
