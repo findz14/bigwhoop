@@ -18,7 +18,7 @@ modules:
   # use bazzite kernel 
   #- from-file: recipe-modules/bazzite.yml 
   # use if gnome image
-  - from-file: recipe-modules/gnome-tweaks.yml
+  - from-file: recipe-modules/flatpaks.yml
 
   # Copy Files
   - type: files
