@@ -6,7 +6,7 @@ name: bigwhoop
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -43,8 +43,8 @@ modules:
         - firefox
         - firefox-langpacks
         - toolbox
-        - plasma-discover
-        #- gnome-software
+        #- plasma-discover
+        - gnome-software
 
   # install default flatpaks
   - type: default-flatpaks
@@ -71,9 +71,9 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
 
     # use if gnome image
-  #- from-file: recipe-modules/gnome-flatpaks.yml
+  - from-file: recipe-modules/gnome-flatpaks.yml
     # use if gnome extensions
-  #- from-file: recipe-modules/gnome-tweaks.yml
+  - from-file: recipe-modules/gnome-tweaks.yml
 
   - type: systemd
   # this example disables automatic flatpak updates and enables a custom service unit for all users
