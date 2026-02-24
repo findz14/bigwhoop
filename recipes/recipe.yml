@@ -37,12 +37,13 @@ modules:
         - virt-manager
         - docker
         - distrobox
+        - libreoffice
     remove:
       packages:
         - firefox
         - firefox-langpacks
         - toolbox
-        - discover
+        - plasma-discover
         #- gnome-software
 
   # install default flatpaks
