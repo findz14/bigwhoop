@@ -24,10 +24,21 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+
+  # remove packages
+  - type: dnf        
+    remove:
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - discover
+        - toolbox
+
   # install packages
   - type: dnf
     install:
-    skip-unavailable: true
     repo:
       nonfree: rpmfusion
       copr:
@@ -42,16 +53,6 @@ modules:
         - docker
         - distrobox
 
-  # remove packages
-  - type: dnf        
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - discover
-        - toolbox
 
   # install default flatpaks
   - type: default-flatpaks
