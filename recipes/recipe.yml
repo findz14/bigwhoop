@@ -46,7 +46,7 @@ modules:
         - lutris
 
   # install steam
-  -type: dnf
+  - type: dnf
     repos:
       nonfree: negativo17
     install:
