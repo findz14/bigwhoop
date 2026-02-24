@@ -1,7 +1,3 @@
-
-# ---------------------------
-# Module 1 — default flatpaks
-# ---------------------------
 - type: default-flatpaks
   configurations:
     - scope: user
@@ -32,9 +28,6 @@
         - org.gnome.font-viewer
         - org.gnome.TextEditor
 
-# ---------------------------
-# Module 2 — GNOME extensions
-# ---------------------------
 - type: gnome-extensions
   install:
     - AppIndicator and KStatusNotifierItem Support
