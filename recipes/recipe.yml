@@ -32,10 +32,16 @@ modules:
     install:
       packages:
         - steam
+        - qemu-kvm
+        - virt-manager
+        - docker
+        - distrobox
     remove:
       packages:
         - firefox
         - firefox-langpacks
+        - toolbox
+        - discover
 
   # install default flatpaks
   - type: default-flatpaks
