@@ -17,6 +17,8 @@ modules:
   - from-file: recipe-modules/cachy.yml
   # use bazzite kernel 
   #- from-file: recipe-modules/bazzite.yml 
+  # use if gnome image
+  - from-file: recipe-modules/gnome-tweaks.yml
 
   # Copy Files
   - type: files
@@ -68,9 +70,6 @@ modules:
           - org.freedesktop.Piper
           - org.fedoraproject.MediaWriter
       - scope: user # Also add Flathub user repo, but no user packages
-
-  # use if gnome image
-  - from-file: recipe-modules/gnome-tweaks.yml
 
   - type: os-release
     properties:
