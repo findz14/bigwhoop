@@ -9,11 +9,7 @@
     repo:
       title: Flathub (system)
     install: # system flatpaks we want all users to have and not remove
-      - org.mozilla.firefox
-      - com.github.tchx84.Flatseal
-      - io.github.flattool.Warehouse
       - page.tesk.Refine
-      - io.github.kolunmi.Bazaar
       - org.gnome.Loupe
       - org.gnome.Calculator
       - org.gnome.Calendar
@@ -30,7 +26,6 @@
       - org.gnome.baobab
       - org.gnome.clocks
       - org.gnome.font-viewer
-      - org.fedoraproject.MediaWriter
       - org.gnome.TextEditor
 
   - type: gnome-extensions
