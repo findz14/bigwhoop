@@ -12,21 +12,32 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+
+  # use cachy Kernel
+  - from-file: recipe-modules/cachy.yml
+  # use bazzite kernel 
+  #- from-file: recipe-modules/bazzite.yml 
+
+  # Copy Files
   - type: files
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  #- type: dnf
-    #repos:
-      #copr:
-        #- atim/starship
-    #install:
-      #packages:
-        #- micro
-        #- starship
+  # install packages
+  - type: dnf
+    install:
+      packages:
+        - steam
+        - qemu-kvm
+        - virt-manager
+        - libreoffice
+        - lutris
+        - ratbagd
+        - docker
+        - distrobox
 
-
+  # remove packages
   - type: dnf        
     remove:
       packages:
@@ -34,7 +45,10 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - discover
+        - toolbox
 
+  # install default flatpaks
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -42,7 +56,27 @@ modules:
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
+          - com.visualstudio.code
+          - com.github.tchx84.Flatseal
+          - io.github.kolunmi.Bazaar
+          - com.spotify.Client
+          - com.discordapp.Discord
+          - com.bitwarden.desktop
+          - com.brave.Browser
+          - com.heroicgameslauncher.hgl
+          - com.vysp3r.ProtonPlus
+          - com.protonvpn.www
+          - org.mozilla.Thunderbird
+          - com.usebottles.bottles
+          - org.freedesktop.Piper
           #- org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
+
+    type: systemd
+    # this example disables automatic flatpak updates and enables a custom service unit for all users
+    system:
+      enabled:
+        - libvirtd
+        - docker
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
