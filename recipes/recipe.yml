@@ -41,8 +41,6 @@ modules:
     install:
       repo:
         nonfree: rpmfusion
-        copr:
-          - atim/starship
       packages: 
         - steam
         - qemu-kvm
