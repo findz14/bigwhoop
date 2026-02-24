@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 type: default-flatpaks
-  configurations:
+configurations:
   - scope: user
     repo:
       # you can override the title to make inclusion of both system and user repos clearer
