@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
-- type: gnome-extensions
-  install:
-    - AppIndicator and KStatusNotifierItem Support
-    - Just Perfection
-    - Dash to Dock
-    - Caffiene
-    - Tiling Shell
-    - Blur my Shell
+type: gnome-extensions
+install:
+  - AppIndicator and KStatusNotifierItem Support
+  - Just Perfection
+  - Dash to Dock
+  - Caffiene
+  - Tiling Shell
+  - Blur my Shell
