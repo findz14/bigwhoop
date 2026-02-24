@@ -76,10 +76,10 @@ modules:
 
   - type: systemd
   # this example disables automatic flatpak updates and enables a custom service unit for all users
-  system:
-    enabled:
-      - docker.service
-      - libvirtd.service
+    system:
+      enabled:
+        - docker.service
+        - libvirtd.service
       
   - type: os-release
     properties:
