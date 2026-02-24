@@ -27,7 +27,12 @@ modules:
   # install packages
   - type: dnf
     install:
-      packages:
+    skip-unavailable: true
+    repo:
+      nonfree: rpmfusion
+      copr:
+        - atim/starship
+      packages: 
         - steam
         - qemu-kvm
         - virt-manager
