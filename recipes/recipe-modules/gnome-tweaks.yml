@@ -1,14 +1,18 @@
-  - type: default-flatpaks
-    configurations:
+
+# ---------------------------
+# Module 1 — default flatpaks
+# ---------------------------
+- type: default-flatpaks
+  configurations:
     - scope: user
       repo:
-        # you can override the title to make inclusion of both system and user repos clearer
         title: Flathub (user)
+
     - notify: false
       scope: system
       repo:
         title: Flathub (system)
-      install: # system flatpaks we want all users to have and not remove
+      install:
         - page.tesk.Refine
         - org.gnome.Loupe
         - org.gnome.Calculator
@@ -27,15 +31,15 @@
         - org.gnome.clocks
         - org.gnome.font-viewer
         - org.gnome.TextEditor
-  
-    - type: gnome-extensions
-      install:
-        - AppIndicator and KStatusNotifierItem Support
-        - Just Perfection
-        - Dash to Dock
-        - Caffiene
-        - Tiling Shell
-        - Blur my Shell
 
-
-
+# ---------------------------
+# Module 2 — GNOME extensions
+# ---------------------------
+- type: gnome-extensions
+  install:
+    - AppIndicator and KStatusNotifierItem Support
+    - Just Perfection
+    - Dash to Dock
+    - Caffiene
+    - Tiling Shell
+    - Blur my Shell
