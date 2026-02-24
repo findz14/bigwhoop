@@ -64,6 +64,7 @@ modules:
           - org.mozilla.Thunderbird
           - com.usebottles.bottles
           - org.freedesktop.Piper
+          - org.fedoraproject.MediaWriter
           #- org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
 
