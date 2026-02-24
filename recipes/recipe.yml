@@ -39,19 +39,12 @@ modules:
   # install packages
   - type: dnf
     install:
-      repo:
-        nonfree: rpmfusion
       packages: 
-        - steam
         - qemu-kvm
         - virt-manager
         - libreoffice
         - lutris
-        - ratbagd
-        - docker
-        - distrobox
-
-
+        
   # install default flatpaks
   - type: default-flatpaks
     configurations:
