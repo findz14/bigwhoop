@@ -27,16 +27,15 @@ modules:
   # dnf module
   - type: dnf
     repos:
-      copr:
-        - atim/starship
+      cleanup: true
       nonfree: negativo17
-      install:
-        packages:
-          - steam
-      remove:
-        packages:
-          - firefox
-          - firefox-langpacks
+    install:
+      packages:
+        - steam
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
 
   # install default flatpaks
   - type: default-flatpaks
