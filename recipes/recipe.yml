@@ -31,10 +31,12 @@ modules:
         - atim/starship
       nonfree: negativo17
       install:
-        - steam
+        packages:
+          - steam
       remove:
-        - firefox
-        - firefox-langpacks
+        packages:
+          - firefox
+          - firefox-langpacks
 
   # install default flatpaks
   - type: default-flatpaks
