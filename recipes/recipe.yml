@@ -24,6 +24,18 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  # dnf module
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+      nonfree: negativo17
+      install:
+        - steam
+      remove:
+        - firefox
+        - firefox-langpacks
+
   # install default flatpaks
   - type: default-flatpaks
     configurations:
