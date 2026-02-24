@@ -39,10 +39,10 @@ modules:
   # install packages
   - type: dnf
     install:
-    repo:
-      nonfree: rpmfusion
-      copr:
-        - atim/starship
+      repo:
+        nonfree: rpmfusion
+        copr:
+          - atim/starship
       packages: 
         - steam
         - qemu-kvm
